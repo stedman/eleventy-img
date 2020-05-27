@@ -5,8 +5,8 @@ Low level utility to perform build-time image transformations.
 ## Features
 
 * Optimizes and resizes images for you, automatically. Can output multiple image sizes. Keeps original image aspect ratios intact. Never upscales images larger than original size.
-* Can output multiple formats (you’ll probably use a combination of `webp`, `png`, `jpeg` but works with any supported image type in `sharp`).
-* Makes it easy to add `width` and `height` attributes for [proper aspect ratio mapping](https://developer.mozilla.org/en-US/docs/Web/Media/images/aspect_ratio_mapping).
+* Can output multiple formats (you’ll probably use a combination of `webp`, `png`, `jpeg` but works with any supported image type in [`sharp`](https://sharp.pixelplumbing.com/api-input#metadata)).
+* Makes it easy to add `width` and `height` attributes to `img` elements for [proper aspect ratio mapping](https://developer.mozilla.org/en-US/docs/Web/Media/images/aspect_ratio_mapping).
 * Download remote images and cache them locally using [`eleventy-cache-assets`](https://github.com/11ty/eleventy-cache-assets). Make your HTML point to local images so you won’t see broken image URLs in the future.
 * Control concurrency of image processing.
 
@@ -39,7 +39,7 @@ Defaults values are shown:
   widths: [null],
 
   // Pass any format supported by sharp
-  formats: ["webp", "jpeg"], //"png"
+  formats: ["webp", "jpeg"], // "png", "gif", "svg"
 
   // the directory in the image URLs <img src="/img/MY_IMAGE.png">
   urlPath: "/img/",
